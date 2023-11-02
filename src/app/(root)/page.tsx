@@ -1,5 +1,3 @@
-import Image from "next/image";
-import styles from "./page.module.scss";
 import clsx from "clsx";
 
 export default function Home() {

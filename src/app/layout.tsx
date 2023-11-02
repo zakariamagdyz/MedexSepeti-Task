@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
-import { roboto } from "@/utils/fonts";
 import "./styles/globals.scss";
+
+import type { Metadata } from "next";
+
+import { roboto } from "@/utils/fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.APP_URL}`),
