@@ -1,4 +1,4 @@
-@use "./breakpoints" as *;
+@use "./maps" as *;
 
 @mixin mq($name) {
   // Check if the breakpoint map has $name

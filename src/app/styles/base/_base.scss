@@ -23,9 +23,15 @@
       }
     }
   }
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 1rem;
+
+  // Generate radius and shadow CSS variables
+  @each $radius-size, $value in $radiuses {
+    --radius-#{$radius-size}: #{$value};
+  }
+
+  @each $shadow-size, $value in $shadows {
+    --shadow-#{$shadow-size}: #{$value};
+  }
 }
 
 body {
