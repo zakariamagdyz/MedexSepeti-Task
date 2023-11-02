@@ -1,0 +1,12 @@
+@use "./breakpoints" as *;
+
+@mixin mq($name) {
+  // Check if the breakpoint map has $name
+  @if map-has-key($breakpoints, $name) {
+    @media (min-width: map-get($breakpoints, $name)) {
+      @content;
+    }
+  } @else {
+    @error "Unknown breakpoint: #{$name}.";
+  }
+}
