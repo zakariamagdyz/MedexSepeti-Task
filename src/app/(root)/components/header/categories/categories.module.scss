@@ -1,0 +1,64 @@
+@import "@/app/styles/abstract";
+
+.categoriesSection {
+  border-top: 5px solid var(--clr-secondary-100);
+  display: none;
+  box-shadow: var(--shadow-sm);
+
+  @include mq("lg") {
+    display: block;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.linkBtn {
+  padding: 0.8rem 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 400;
+  margin: 0.3rem 0;
+  border-radius: var(--radius-sm);
+  text-wrap: nowrap;
+
+  &:first-child {
+    background-color: var(--clr-primary-300);
+  }
+  &:last-child {
+    background-color: var(--clr-secondary-200);
+  }
+}
+
+.navList {
+  display: flex;
+}
+
+.navItem {
+  padding: 0.5rem 0;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  color: var(--clr-primary-300);
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--clr-secondary-200);
+    border-bottom: 3px solid var(--clr-secondary-100);
+  }
+  &:not(:last-child)::after {
+    content: "|";
+    color: var(--clr-primary-300);
+  }
+}
+
+.navLink {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}

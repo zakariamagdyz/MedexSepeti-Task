@@ -1,5 +1,9 @@
-import clsx from "clsx";
+import Header from "./components/header";
 
 export default function Home() {
-  return <main className={clsx("m-10")}>Medex</main>;
+  return (
+    <main>
+      <Header />
+    </main>
+  );
 }

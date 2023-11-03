@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: "https://www.medexsepeti.com/",
     title: "MedexSepeti",
     description: "MedexSepeti clone by zakaria magdy",
-    images: ["/auction-card.webp"],
+    images: ["/images/medex-card.webp"],
     type: "website",
     siteName: "MedexSepeti",
     locale: "en_US",

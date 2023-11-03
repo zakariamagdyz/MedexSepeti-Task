@@ -3344,6 +3344,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lucide-react@npm:^0.291.0":
+  version: 0.291.0
+  resolution: "lucide-react@npm:0.291.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0
+  checksum: 7c15106d25aecb492004bcdb8e5e7c3805929f00d8b3bb096a45b4489e59dd8276f92b146fe66d1d72cefe88a570c25e832fd97ad55ce272a3bbfded7a459c86
+  languageName: node
+  linkType: hard
+
 "make-fetch-happen@npm:^13.0.0":
   version: 13.0.0
   resolution: "make-fetch-happen@npm:13.0.0"
@@ -3397,6 +3406,7 @@ __metadata:
     eslint-plugin-simple-import-sort: ^10.0.0
     husky: ^8.0.3
     lint-staged: ^15.0.2
+    lucide-react: ^0.291.0
     next: 14.0.1
     prettier: ^3.0.3
     react: ^18

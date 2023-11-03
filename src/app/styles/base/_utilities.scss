@@ -62,3 +62,26 @@ $sizes: (
 // Generate margin and padding utility classes
 @include generate-spacing-utilities(margin);
 @include generate-spacing-utilities(padding);
+
+// generate width and height utility classes
+@each $size, $value in $sizes {
+  .w-#{$size} {
+    width: $value;
+  }
+  .h-#{$size} {
+    height: $value;
+  }
+}
+
+// some misc utilities
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+  padding-inline: 1rem;
+}
