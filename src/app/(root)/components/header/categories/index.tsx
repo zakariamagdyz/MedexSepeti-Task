@@ -1,7 +1,7 @@
 "use client";
 import clsx from "clsx";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 import { NavItem, navLinks } from "../data";
 import CategroySubMenu from "../sub-category-menu";
@@ -9,15 +9,26 @@ import styles from "./categories.module.scss";
 
 const Categories = () => {
   const [activeMenu, setActiveMenu] = useState<NavItem | null>(null);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   const handleMouseEnter = (menuName: NavItem) => {
-    setActiveMenu(menuName);
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+
+    hoverTimeoutRef.current = setTimeout(() => {
+      setActiveMenu(menuName);
+      hoverTimeoutRef.current = undefined;
+    }, 400);
   };
 
   const handleMouseLeave = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = undefined;
+    }
     setActiveMenu(null);
   };
-
   const renderNavLink = (item: { key: NavItem; href: string; label: string }) => (
     <li key={item.key} className={styles.navItem} onMouseEnter={() => handleMouseEnter(item.key)}>
       <Link href={item.href} className={styles.navLink}>
