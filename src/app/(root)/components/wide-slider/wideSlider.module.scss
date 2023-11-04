@@ -1,0 +1,22 @@
+@import "@/app/styles/abstract";
+.wrapper {
+  width: 100vw;
+  height: 500px;
+}
+
+.sliderImage {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-md);
+  object-fit: contain;
+  @include mq("sm") {
+    object-fit: cover;
+  }
+}
+
+.previewImage {
+  width: 200px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}

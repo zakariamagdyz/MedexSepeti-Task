@@ -43,7 +43,7 @@ const Categories = () => {
         <Link href={"/special-offers"} className={styles.linkBtn}>
           Special Offers
         </Link>
-        <nav onMouseLeave={handleMouseLeave}>
+        <nav className={styles.nav} onMouseLeave={handleMouseLeave}>
           <ul className={styles.navList}>{navLinks.map(renderNavLink)}</ul>
           {activeMenu && <CategroySubMenu menuName={activeMenu} />}
         </nav>

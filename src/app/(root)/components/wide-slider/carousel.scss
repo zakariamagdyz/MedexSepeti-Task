@@ -1,0 +1,46 @@
+@import "@/app/styles/abstract";
+
+.slick-dots {
+  bottom: -50px;
+  @include mq("md") {
+    bottom: -94px;
+    li {
+      width: 100px !important;
+      height: auto;
+    }
+  }
+
+  li button:before {
+    font-size: 20px !important;
+    color: var(--clr-primary-100) !important;
+  }
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: var(--clr-primary-300) !important;
+  font-size: 40px !important;
+}
+
+.slick-arrow {
+  top: 108%;
+}
+.slick-next {
+  right: 5%;
+  z-index: 9999 !important;
+}
+
+.slick-prev {
+  left: 5%;
+  z-index: 9999 !important;
+}
+
+.slick-active {
+  @include mq("md") {
+    outline-style: solid;
+    outline-width: 4px;
+    outline-offset: 2px;
+    outline-color: var(--clr-secondary-100);
+    border-radius: var(--radius-md);
+  }
+}

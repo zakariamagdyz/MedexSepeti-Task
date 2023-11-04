@@ -18,7 +18,9 @@
     "lucide-react": "^0.291.0",
     "next": "14.0.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.2.0",
@@ -26,6 +28,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-slick": "^0.23.11",
     "@typescript-eslint/eslint-plugin": "^6.9.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.1",

@@ -11,10 +11,20 @@
 }
 
 .wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   justify-content: space-between;
   align-items: center;
+
   position: relative;
+}
+
+.nav {
+  grid-column: 1/-1;
+  width: 100%;
+  @include mq("xl") {
+    grid-column: 2/3;
+  }
 }
 
 .linkBtn {
@@ -29,14 +39,18 @@
 
   &:first-child {
     background-color: var(--clr-primary-300);
+    grid-column: 1/1;
   }
   &:last-child {
     background-color: var(--clr-secondary-200);
+    grid-column: 3/4;
+    grid-row: 1/1;
   }
 }
 
 .navList {
   display: flex;
+  justify-content: center;
 }
 
 .navItem {
