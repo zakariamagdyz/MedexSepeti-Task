@@ -38,7 +38,9 @@ const Product: FC<ProductProps> = ({ product, badge }) => {
         />
       </figure>
       <article className={styles.cardContent}>
-        <h4 className={styles.cardTitle}>{product.title}</h4>
+        <h4 className={styles.cardTitle} title={product.title}>
+          {product.title}
+        </h4>
         <p className={styles.cardPrice}>${product.price}</p>
         {badge && <span className={styles.cardBadge}>{badge}</span>}
       </article>

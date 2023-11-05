@@ -1,0 +1,12 @@
+.errorContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: var(--radius-md);
+  background-color: #b00020;
+  padding: 0.5rem;
+  text-align: center;
+
+  h3 {
+    color: white;
+  }
+}
