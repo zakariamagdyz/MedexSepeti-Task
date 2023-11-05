@@ -1,46 +1,44 @@
 @import "@/app/styles/abstract";
 
-.wideSlider .slick-dots {
-  bottom: -50px;
+.mostViewed-section {
+  h2 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    color: var(--clr-primary-200);
+  }
+}
+.mostViewed-section .slick-list {
+  height: 750px;
+}
+.mostViewed-section .slick-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mostViewed-section .slick-track {
+  display: flex;
+  gap: 1rem;
+  height: 710px;
+}
+
+.mostViewed-section .slick-next:before,
+.mostViewed-section .slick-prev:before {
+  color: var(--clr-secondary-300);
+  font-size: 40px;
   @include mq("md") {
-    bottom: -94px;
-    li {
-      width: 100px !important;
-      height: auto;
-    }
-  }
-
-  li button:before {
-    font-size: 20px !important;
-    color: var(--clr-primary-100) !important;
+    font-size: 60px;
   }
 }
 
-.wideSlider .slick-next:before,
-.wideSlider .slick-prev:before {
-  color: var(--clr-primary-300) !important;
-  font-size: 40px !important;
+.mostViewed-section .slick-arrow {
+  top: 50%;
 }
-
-.wideSlider .slick-arrow {
-  top: 108%;
-}
-.wideSlider .slick-next {
+.mostViewed-section .slick-next {
   right: 5%;
-  z-index: 9999 !important;
+  z-index: 9999;
 }
 
-.wideSlider .slick-prev {
-  left: 5%;
-  z-index: 9999 !important;
-}
-
-.wideSlider .slick-active {
-  @include mq("md") {
-    outline-style: solid;
-    outline-width: 4px;
-    outline-offset: 2px;
-    outline-color: var(--clr-secondary-100);
-    border-radius: var(--radius-md);
-  }
+.mostViewed-section .slick-prev {
+  left: 3%;
+  z-index: 9999;
 }

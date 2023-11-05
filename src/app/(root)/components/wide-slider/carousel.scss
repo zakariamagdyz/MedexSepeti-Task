@@ -5,23 +5,23 @@
   @include mq("md") {
     bottom: -94px;
     li {
-      width: 100px !important;
+      width: 100px;
       height: auto;
     }
   }
 
   li button:before {
-    font-size: 20px !important;
-    color: var(--clr-primary-100) !important;
+    font-size: 20px;
+    color: var(--clr-primary-100);
   }
 }
 
 .wideSlider .slick-next:before,
 .wideSlider .slick-prev:before {
-  color: white !important;
-  font-size: 40px !important;
+  color: white;
+  font-size: 40px;
   @include mq("md") {
-    font-size: 60px !important;
+    font-size: 60px;
   }
 }
 
@@ -30,12 +30,12 @@
 }
 .wideSlider .slick-next {
   right: 5%;
-  z-index: 9999 !important;
+  z-index: 9999;
 }
 
 .wideSlider .slick-prev {
   left: 2%;
-  z-index: 9999 !important;
+  z-index: 9999;
 }
 
 .wideSlider .slick-active {
