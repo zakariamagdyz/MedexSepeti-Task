@@ -26,7 +26,10 @@
 .brands-section .slick-next:before,
 .brands-section .slick-prev:before {
   color: white;
-  font-size: 60px !important;
+  font-size: 40px !important;
+  @include mq("md") {
+    font-size: 60px !important;
+  }
 }
 
 .brands-section .slick-arrow {
@@ -38,6 +41,6 @@
 }
 
 .brands-section .slick-prev {
-  left: 5%;
+  left: -3%;
   z-index: 9999 !important;
 }

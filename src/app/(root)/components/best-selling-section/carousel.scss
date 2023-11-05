@@ -26,7 +26,10 @@
 .bestSelling-slider .slick-next:before,
 .bestSelling-slider .slick-prev:before {
   color: var(--clr-secondary-200) !important;
-  font-size: 60px !important;
+  font-size: 40px !important;
+  @include mq("md") {
+    font-size: 60px !important;
+  }
 }
 
 .bestSelling-slider .slick-arrow {
@@ -38,18 +41,8 @@
 }
 
 .bestSelling-slider .slick-prev {
-  left: 5%;
+  left: -3%;
   z-index: 9999 !important;
-}
-
-.bestSelling-slider .slick-active {
-  //   @include mq("md") {
-  //     outline-style: solid;
-  //     outline-width: 4px;
-  //     outline-offset: 2px;
-  //     outline-color: var(--clr-secondary-100);
-  //     border-radius: var(--radius-md);
-  //   }
 }
 
 .bestSelling-slider {

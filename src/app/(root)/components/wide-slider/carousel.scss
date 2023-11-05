@@ -18,12 +18,15 @@
 
 .wideSlider .slick-next:before,
 .wideSlider .slick-prev:before {
-  color: var(--clr-primary-300) !important;
+  color: white !important;
   font-size: 40px !important;
+  @include mq("md") {
+    font-size: 60px !important;
+  }
 }
 
 .wideSlider .slick-arrow {
-  top: 108%;
+  top: 50%;
 }
 .wideSlider .slick-next {
   right: 5%;
@@ -31,7 +34,7 @@
 }
 
 .wideSlider .slick-prev {
-  left: 5%;
+  left: 2%;
   z-index: 9999 !important;
 }
 
