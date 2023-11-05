@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
-import { roboto } from "@/utils/fonts";
 import "./styles/globals.scss";
+
+import type { Metadata } from "next";
+
+import { roboto } from "@/utils/fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.APP_URL}`),
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
     url: "https://www.medexsepeti.com/",
     title: "MedexSepeti",
     description: "MedexSepeti clone by zakaria magdy",
-    images: ["/auction-card.webp"],
+    images: ["/images/medex-card.webp"],
     type: "website",
     siteName: "MedexSepeti",
     locale: "en_US",

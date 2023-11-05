@@ -1,0 +1,44 @@
+@import "@/app/styles/abstract";
+
+.mostViewed-section {
+  h2 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    color: var(--clr-primary-200);
+  }
+}
+.mostViewed-section .slick-list {
+  height: 750px;
+}
+.mostViewed-section .slick-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mostViewed-section .slick-track {
+  display: flex;
+  gap: 1rem;
+  height: 710px;
+}
+
+.mostViewed-section .slick-next:before,
+.mostViewed-section .slick-prev:before {
+  color: var(--clr-secondary-300);
+  font-size: 40px;
+  @include mq("md") {
+    font-size: 60px;
+  }
+}
+
+.mostViewed-section .slick-arrow {
+  top: 50%;
+}
+.mostViewed-section .slick-next {
+  right: 5%;
+  z-index: 9999;
+}
+
+.mostViewed-section .slick-prev {
+  left: 3%;
+  z-index: 9999;
+}

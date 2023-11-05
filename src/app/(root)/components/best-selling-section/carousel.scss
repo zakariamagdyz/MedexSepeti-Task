@@ -1,0 +1,50 @@
+@import "@/app/styles/abstract";
+
+.bestSelling-slider .slick-track {
+  display: flex;
+  gap: 1.5rem;
+
+  height: 400px;
+}
+
+.bestSelling-slider .slick-next:before,
+.bestSelling-slider .slick-prev:before {
+  color: var(--clr-secondary-200);
+  font-size: 40px;
+  @include mq("md") {
+    font-size: 60px;
+  }
+}
+
+.bestSelling-slider .slick-arrow {
+  top: 50%;
+}
+.bestSelling-slider .slick-next {
+  right: 5%;
+  z-index: 9999;
+}
+
+.bestSelling-slider .slick-prev {
+  left: -3%;
+  z-index: 9999;
+}
+
+.bestSelling-slider {
+  border-width: 3px;
+  border-top: 3px;
+  border-style: solid;
+  border-bottom: 0;
+  border-image: linear-gradient(
+      to left,
+      rgb(255, 255, 255),
+      var(--clr-secondary-100),
+      var(--clr-secondary-100),
+      rgb(255, 255, 255)
+    )
+    100% 1;
+  h2 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    color: var(--clr-primary-200);
+  }
+}

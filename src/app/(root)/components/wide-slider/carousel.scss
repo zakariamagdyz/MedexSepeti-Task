@@ -1,0 +1,49 @@
+@import "@/app/styles/abstract";
+
+.wideSlider .slick-dots {
+  bottom: -50px;
+  @include mq("md") {
+    bottom: -94px;
+    li {
+      width: 100px;
+      height: auto;
+    }
+  }
+
+  li button:before {
+    font-size: 20px;
+    color: var(--clr-primary-100);
+  }
+}
+
+.wideSlider .slick-next:before,
+.wideSlider .slick-prev:before {
+  color: white;
+  font-size: 40px;
+  @include mq("md") {
+    font-size: 60px;
+  }
+}
+
+.wideSlider .slick-arrow {
+  top: 50%;
+}
+.wideSlider .slick-next {
+  right: 5%;
+  z-index: 9999;
+}
+
+.wideSlider .slick-prev {
+  left: 2%;
+  z-index: 9999;
+}
+
+.wideSlider .slick-active {
+  @include mq("md") {
+    outline-style: solid;
+    outline-width: 4px;
+    outline-offset: 2px;
+    outline-color: var(--clr-secondary-100);
+    border-radius: var(--radius-md);
+  }
+}

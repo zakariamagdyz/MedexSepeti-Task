@@ -1,0 +1,99 @@
+// Define sizes for the utility classes
+$sizes: (
+  "0": 0,
+  "1": 0.25rem,
+  // 4px if 1rem = 16px
+  "2": 0.5rem,
+  // 8px
+  "3": 0.75rem,
+  // 12px
+  "4": 1rem,
+  // 16px
+  "5": 1.25rem,
+  // 20px
+  "6": 1.5rem,
+  // 24px
+  "7": 1.75rem,
+  // 28px
+  "8": 2rem,
+  // 32px
+  "9": 2.25rem,
+  // 36px
+  "10": 2.5rem,
+  // 40px
+  "25": 6.25rem,
+  // 100px
+  "40": 10rem,
+  // 160px
+  "45": 11.25rem,
+  // 180px
+  "64": 16rem,
+  // 265px
+);
+
+// Function to generate margin and padding classes
+@mixin generate-spacing-utilities($property: margin) {
+  @each $size, $value in $sizes {
+    // e.g., .m-1 { margin: 0.25rem; }
+    .#{str-slice($property, 1, 1)}-#{$size} {
+      #{$property}: $value;
+    }
+
+    // Vertical and Horizontal
+    // e.g., .mx-1 { margin-left: 0.25rem; margin-right: 0.25rem; }
+    .#{str-slice($property, 1, 1)}x-#{$size} {
+      #{$property}-left: $value;
+      #{$property}-right: $value;
+    }
+
+    .#{str-slice($property, 1, 1)}y-#{$size} {
+      #{$property}-top: $value;
+      #{$property}-bottom: $value;
+    }
+
+    // Individual sides
+    .#{str-slice($property, 1, 1)}t-#{$size} {
+      #{$property}-top: $value;
+    }
+    .#{str-slice($property, 1, 1)}r-#{$size} {
+      #{$property}-right: $value;
+    }
+    .#{str-slice($property, 1, 1)}b-#{$size} {
+      #{$property}-bottom: $value;
+    }
+    .#{str-slice($property, 1, 1)}l-#{$size} {
+      #{$property}-left: $value;
+    }
+  }
+}
+
+// Generate margin and padding utility classes
+@include generate-spacing-utilities(margin);
+@include generate-spacing-utilities(padding);
+
+// generate width and height utility classes
+@each $size, $value in $sizes {
+  .w-#{$size} {
+    width: $value;
+  }
+  .h-#{$size} {
+    height: $value;
+  }
+}
+
+// some misc utilities
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+  padding-inline: 1rem;
+}
+
+.radius-full {
+  border-radius: var(--radius-full) !important;
+}

@@ -2,7 +2,6 @@
 
 :root {
   // Loop through each color and its shades to create CSS variables for color palette.
-
   @each $color, $shades in $colors {
     @each $shade, $value in $shades {
       --clr-#{$color}-#{$shade}: #{$value};
@@ -23,6 +22,15 @@
         }
       }
     }
+  }
+
+  // Generate radius and shadow CSS variables
+  @each $radius-size, $value in $radiuses {
+    --radius-#{$radius-size}: #{$value};
+  }
+
+  @each $shadow-size, $value in $shadows {
+    --shadow-#{$shadow-size}: #{$value};
   }
 }
 
