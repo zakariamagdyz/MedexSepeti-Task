@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useRef, useState } from "react";
 
 import { NavItem, navLinks } from "../data";
-import CategroySubMenu from "../sub-category-menu";
+import SubCategoryMenu from "../sub-category-menu";
 import styles from "./categories.module.scss";
 
 const Categories = () => {
@@ -45,7 +45,7 @@ const Categories = () => {
         </Link>
         <nav className={styles.nav} onMouseLeave={handleMouseLeave}>
           <ul className={styles.navList}>{navLinks.map(renderNavLink)}</ul>
-          {activeMenu && <CategroySubMenu menuName={activeMenu} />}
+          {activeMenu && <SubCategoryMenu menuName={activeMenu} />}
         </nav>
         <Link href="/student-club" className={styles.linkBtn}>
           Student club

@@ -1,6 +1,5 @@
-import { Suspense } from "react";
-
 import Await from "@/components/await";
+import PromiseRenderer from "@/components/promise-renderer";
 import { addBlurredBrandsDataUrls, addBlurredDataUrls } from "@/lib/getbase64";
 import prismadb from "@/lib/prismaDb";
 
@@ -44,7 +43,7 @@ const Home = async () => {
         <WideSlider />
       </section>
       <div className="mt-45">
-        <SuspenseWithData promise={BestSellingProductsPromise} skeleton={ProductSkeletonList}>
+        <PromiseRenderer promise={BestSellingProductsPromise} skeleton={ProductSkeletonList}>
           {(bestSellingProducts) => (
             <Await promise={addBlurredDataUrls(bestSellingProducts)}>
               {(productWithImagePlaceholder) => (
@@ -52,10 +51,10 @@ const Home = async () => {
               )}
             </Await>
           )}
-        </SuspenseWithData>
+        </PromiseRenderer>
       </div>
       <div className="mt-40">
-        <SuspenseWithData promise={brandsPromise} skeleton={BandSkeletonList}>
+        <PromiseRenderer promise={brandsPromise} skeleton={BandSkeletonList}>
           {(brands) => (
             <Await promise={addBlurredBrandsDataUrls(brands)}>
               {(brandsWithImagePlaceholder) => (
@@ -63,10 +62,10 @@ const Home = async () => {
               )}
             </Await>
           )}
-        </SuspenseWithData>
+        </PromiseRenderer>
       </div>
       <div className="mt-25">
-        <SuspenseWithData promise={mostViewedProductsPromise} skeleton={ProductSkeletonList}>
+        <PromiseRenderer promise={mostViewedProductsPromise} skeleton={ProductSkeletonList}>
           {(mostViewedProducts) => (
             <Await promise={addBlurredDataUrls(mostViewedProducts)}>
               {(productWithImagePlaceholder) => (
@@ -74,10 +73,10 @@ const Home = async () => {
               )}
             </Await>
           )}
-        </SuspenseWithData>
+        </PromiseRenderer>
       </div>
       <div className="mt-25">
-        <SuspenseWithData promise={justArrivedProductsPromise} skeleton={ProductSkeletonList}>
+        <PromiseRenderer promise={justArrivedProductsPromise} skeleton={ProductSkeletonList}>
           {(justArrivedPropducts) => (
             <Await promise={addBlurredDataUrls(justArrivedPropducts)}>
               {(productWithImagePlaceholder) => (
@@ -85,28 +84,10 @@ const Home = async () => {
               )}
             </Await>
           )}
-        </SuspenseWithData>
+        </PromiseRenderer>
       </div>
     </main>
   );
 };
 
 export default Home;
-
-type SuspenseWithDataProps<T> = {
-  promise: Promise<T>;
-  children: (data: T) => JSX.Element;
-  skeleton: () => JSX.Element;
-};
-
-const SuspenseWithData = <T,>({
-  promise,
-  skeleton: Skeleton,
-  children,
-}: SuspenseWithDataProps<T>) => {
-  return (
-    <Suspense fallback={<Skeleton />}>
-      <Await promise={promise}>{children}</Await>
-    </Suspense>
-  );
-};
