@@ -11,7 +11,8 @@
     "format:check": "prettier . --check",
     "format": "prettier -uw .",
     "typecheck": "tsc --noEmit ",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "prisma:generate": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.5.2",

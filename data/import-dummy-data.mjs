@@ -22,7 +22,7 @@ async function createDummyData() {
         title: faker.lorem.words({ min: 1, max: 3 }),
         description: faker.lorem.paragraph(2),
         price: faker.number.int({ min: 300, max: 5_000 }),
-        imageUrl: faker.image.urlLoremFlickr({ category: "medical", width: 180, height: 180 }),
+        imageUrl: faker.image.urlLoremFlickr({ category: "products", width: 180, height: 180 }),
         tag: faker.helpers.arrayElement(["BEST_SELLING", "NORMAL", "MOST_VIEWED"]),
         createdAt: faker.date.between({ from: "2020-01-01", to: Date.now() }),
         views: faker.number.int({ min: 10, max: 10_000 }), // 57
