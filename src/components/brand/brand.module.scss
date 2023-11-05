@@ -1,0 +1,17 @@
+.card {
+  text-align: center;
+  h2 {
+    font-size: 1rem;
+    color: white;
+  }
+}
+.cardImage {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: var(--radius-full);
+  padding: 0.1rem;
+  border: 1px solid #ccc;
+  box-shadow: var(--shadow-md);
+}

@@ -1,0 +1,43 @@
+@import "@/app/styles/abstract";
+
+.brands-section {
+  background-color: var(--clr-primary-300);
+  padding: 1rem;
+  h2 {
+    color: white;
+    margin-bottom: 4rem;
+  }
+}
+
+.brands-section .slick-track {
+  display: flex !important;
+  gap: 1.5rem !important;
+}
+
+.brands-section .slick-dots {
+  bottom: -50px;
+
+  li button:before {
+    font-size: 20px !important;
+    color: var(--clr-primary-100) !important;
+  }
+}
+
+.brands-section .slick-next:before,
+.brands-section .slick-prev:before {
+  color: white;
+  font-size: 60px !important;
+}
+
+.brands-section .slick-arrow {
+  top: 20%;
+}
+.brands-section .slick-next {
+  right: 5%;
+  z-index: 9999 !important;
+}
+
+.brands-section .slick-prev {
+  left: 5%;
+  z-index: 9999 !important;
+}

@@ -10,8 +10,9 @@ import styles from "./product.module.scss";
 
 type ProductProps = {
   product: ProductWithBlurredDataUrls;
+  badge?: string;
 };
-const Product: FC<ProductProps> = ({ product }) => {
+const Product: FC<ProductProps> = ({ product, badge }) => {
   return (
     <Link key={product.id} href={`/products/${product.id}`} className={styles.card}>
       <div className={styles.cardFavorite}>
@@ -38,7 +39,7 @@ const Product: FC<ProductProps> = ({ product }) => {
       </figure>
       <article className={styles.cardContent}>
         <h4 className={styles.cardTitle}>{product.title}</h4>
-        <span className={styles.cardBadge}>PRO</span>
+        {badge && <span className={styles.cardBadge}>{badge}</span>}
       </article>
     </Link>
   );

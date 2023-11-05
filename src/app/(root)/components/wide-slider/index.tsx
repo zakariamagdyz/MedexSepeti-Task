@@ -1,10 +1,8 @@
 "use client";
 import "./carousel.scss";
 
-import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import Slider, { Settings } from "react-slick";
 
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -17,7 +15,7 @@ const WideSlider = () => {
   const currentScreenSettings = isSmallScreen ? smallScreenSettings : bigScreensettings;
 
   return (
-    <section className={clsx(styles.section, "container", "wideSlider")}>
+    <section className="container wideSlider">
       <Slider {...currentScreenSettings}>
         {IMAGES_LIST.map((img, i) => (
           <div key={i} className={styles.wrapper}>
