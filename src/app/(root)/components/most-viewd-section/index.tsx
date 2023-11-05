@@ -4,6 +4,7 @@ import "./carousel.scss";
 import React, { FC } from "react";
 import Slider, { Settings } from "react-slick";
 
+import NoDataFound from "@/components/no-data-found";
 import Product from "@/components/product";
 import { ProductWithBlurredDataUrls } from "@/lib/getbase64";
 
@@ -11,6 +12,8 @@ type MostViewedProductsProps = {
   products: ProductWithBlurredDataUrls[];
 };
 const MostViewedProducts: FC<MostViewedProductsProps> = ({ products }) => {
+  if (!products.length) return <NoDataFound entityName="Product" />;
+
   return (
     <section className="container mostViewed-section">
       <h2>The Most Viewed Products</h2>

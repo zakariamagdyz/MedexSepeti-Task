@@ -4,6 +4,7 @@ import "./carousel.scss";
 import React, { FC } from "react";
 import Slider, { Settings } from "react-slick";
 
+import NoDataFound from "@/components/no-data-found";
 import Product from "@/components/product";
 import { ProductWithBlurredDataUrls } from "@/lib/getbase64";
 
@@ -11,6 +12,8 @@ type BestSellingProductsProps = {
   products: ProductWithBlurredDataUrls[];
 };
 const BestSellingProducts: FC<BestSellingProductsProps> = ({ products }) => {
+  if (!products.length) return <NoDataFound entityName="Product" />;
+
   return (
     <section className="container bestSelling-slider">
       <h2>Best Selling</h2>

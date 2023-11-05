@@ -5,12 +5,14 @@ import { FC } from "react";
 import Slider, { Settings } from "react-slick";
 
 import BrandItem from "@/components/brand";
+import NoDataFound from "@/components/no-data-found";
 import { BrandWithBlurredDataUrls } from "@/lib/getbase64";
 
 type BrandsSectionProps = {
   brands: BrandWithBlurredDataUrls[];
 };
 const BrandsSection: FC<BrandsSectionProps> = ({ brands }) => {
+  if (!brands.length) return <NoDataFound entityName="brand" />;
   return (
     <section className="brands-section">
       <div className="container">
