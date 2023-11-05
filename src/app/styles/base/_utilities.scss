@@ -21,6 +21,10 @@ $sizes: (
   // 36px
   "10": 2.5rem,
   // 40px
+  "45": 11.25rem,
+  // 180px
+  "64": 16rem,
+  // 265px
 );
 
 // Function to generate margin and padding classes
@@ -84,4 +88,8 @@ $sizes: (
   margin: auto;
   max-width: 1200px;
   padding-inline: 1rem;
+}
+
+.radius-full {
+  border-radius: var(--radius-full) !important;
 }

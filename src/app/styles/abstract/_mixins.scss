@@ -10,3 +10,16 @@
     @error "Unknown breakpoint: #{$name}.";
   }
 }
+
+@mixin animation-utility(
+  $name,
+  $duration: 1s,
+  $timing-function: ease-in-out,
+  $iteration-count: infinite
+) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $timing-function;
+  animation-iteration-count: $iteration-count;
+  will-change: transform, opacity;
+}

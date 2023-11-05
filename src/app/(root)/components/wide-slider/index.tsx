@@ -17,7 +17,7 @@ const WideSlider = () => {
   const currentScreenSettings = isSmallScreen ? smallScreenSettings : bigScreensettings;
 
   return (
-    <section className={clsx(styles.section, "container")}>
+    <section className={clsx(styles.section, "container", "wideSlider")}>
       <Slider {...currentScreenSettings}>
         {IMAGES_LIST.map((img, i) => (
           <div key={i} className={styles.wrapper}>
